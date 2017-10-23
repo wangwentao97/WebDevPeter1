@@ -1,0 +1,186 @@
+/* =============================================================================
+   Page Styles
+   ========================================================================== */
+   body{
+      background-color: #7A7A7A;
+   }
+
+   /*******************************
+      NavBar Styles
+   *******************************/
+
+   #Logo{
+      float:left;
+      margin-left: 10px;
+   }
+
+   #Logo img{
+      margin-top: 5px;
+      height: 60px;
+   }
+
+   #Header{
+      float:left;
+      margin-top: 0px;
+      margin-left: 20px;
+      color: #FFFAFA;
+   }
+
+   .clear-fix::after {
+         display: block;
+         clear: both;
+         height: 0;
+         font-size: 0;
+         content: '';
+         visibility: hidden;
+      }
+   #navbar ul {
+         list-style-type: none;
+         position: relative;
+         margin-left: 360px;
+      }
+
+   #navbar ul li {
+         font-size: 18px;
+         text-transform: uppercase;
+         width: 19%;
+         float: left;
+         background-color: gray;
+         margin-top:9px;
+         margin-left: 1px;
+         margin-right: 1px;
+
+      }
+
+   #navbar ul li:hover {
+         background-color: #666666;
+      }
+
+
+
+   #navbar ul a {
+         display: block;
+         color:#FFFAFA;
+         text-decoration: none;
+         line-height: 30px;
+         padding: 15px;
+         text-align: center;
+
+      }
+
+   /*******************************
+      Gallary Styles
+   *******************************/
+
+.container {
+   width: 1200px;
+   margin: 0 auto;
+}
+
+.image {
+   position: relative;
+   width: 240px;
+   height: 330PX;
+   display: inline-block;
+   margin: 20px;
+   box-shadow: 0 0 10px black;
+   /*margin-top: 20px;*/  
+   border-radius: 5px;
+}
+
+.image img {
+   width:100% ;
+   height: 100%;
+   display: block;
+   position: relative;
+}
+
+.image .mask {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left:0;
+   background-color: rgba(200,200,200,0.5);
+}
+
+.image h2 {
+      text-transform: uppercase;
+      color: rgb(40,40,40);
+      font-size: 22px;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.8);
+      margin: 20px 0 0 0;
+      text-shadow: none;
+      position: relative;
+   }
+
+.image p {
+   font-family: Georgia, serif;
+   /*font-style: italic;*/
+   font-size: 10px;
+   color:#FFF;
+   padding: 10px 20px 5px 20px;
+   position: relative;
+}
+/*******************************
+      CSS3 Hover Styles
+   *******************************/
+
+   /* set up transitions for hover*/
+   .image{
+      transition: all 0.4s ease-in-out;
+      z-index: 0;
+   }
+
+   .image img {
+       left: 10px;
+       margin-left: -10px;
+       transition: all 0.5s ease-in-out;
+   }
+
+   .image .mask {
+      transition: all 0.5s linear;
+      opacity: 0;
+   }
+
+   .image h2 {
+       background-color: transparent;
+       border-bottom: 1px solid silver;
+       transform: scale(0);
+       transition: all 0.5s linear;
+       opacity: 0;
+   }
+
+   .image p{
+      transform: scale(0);
+      opacity: 0;
+      transition: all 0.5s linear;
+   }
+
+   /* zoom the image on hover*/
+   .image:hover{
+      transform: scale(1.4);
+      z-index: 100;
+   }
+
+   .image:hover img {
+      /*transform: scale(1.7);*/
+      opacity: 0.6;
+   }
+
+   /* show mask div on hover*/
+
+   .image:hover .mask {
+      /*transform: scale(1.7);*/
+      opacity: 1;
+   }
+
+   /*scale from 0 to 2, and up the opacity from 0 to 1*/
+
+   .image:hover h2,
+   .image:hover p{
+      transform: scale(1);
+      opacity: 1;
+   }
+
