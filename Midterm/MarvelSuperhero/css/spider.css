@@ -5,6 +5,12 @@
       background-color: #7A7A7A;
    }
 
+   footer{
+    color: white;
+    font-size: 12px;
+    margin-left: 1%;
+   }
+
    /*******************************
       NavBar Styles
    *******************************/

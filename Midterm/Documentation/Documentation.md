@@ -13,6 +13,8 @@ For this page, I arranged for images in a row that show how the character is rep
 3.	Same as the two previous pages, the header of the category page is also the same design.
 For the content of this page, I decided to make a slide show by clicking buttons to see different pictures. This can be realized by JavaScript mouse click functions to change the image. But I want to use CSS to realize it. After learning more about the transition function and referred to some sample codes, I found that there is a smart way to make it look like changing images, by letting the image to appear outside the div and then move into the div to show it out. Using a href as a “button” to call different images, and transition function to move it inside, the slide show is then realized successfully.
 
+After the lecture in photoshop, I edited all my images. I cut my images into the correct size as my divs are designed. After that I decreased the file size of the image so that they can load faster on the website. A miner issue is that the quality of the images are not so good, I have to sacrifise the quailty of the images to make them smaller. I think one thing I need to practice is to balance between the size of the images and the quality of the images.
+
 Many further improvements could be added. Improve the background and navbar design. Make different slideshow effects with JavaScript. Polish the overall design of the gallery. There are some remaining div locating problems that need to solved. Complete the content of the webpage.  
 
 The url of my website is http://192.168.50.184/~ww1025/Midterm/index.html
