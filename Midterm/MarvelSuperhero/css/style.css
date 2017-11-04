@@ -10,8 +10,17 @@ Copyright 2013, Josh Cope
 /* =============================================================================
    Page Styles
    ========================================================================== */
+   @import url('https://fonts.googleapis.com/css?family=Boogaloo');
+
+
    body{
       background-color: #7A7A7A;
+      font-family: 'Boogaloo', cursive;
+      background-image: url(../img/bg1.jpg);
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-attachment: fixed;
+      background-size: 100%;
    }
 
    footer{
@@ -129,7 +138,7 @@ Copyright 2013, Josh Cope
    }
 
    .view p {
-   	font-family: Georgia, serif;
+   	font-family: 'Boogaloo', cursive;
    	/*font-style: italic;*/
    	font-size: 10px;
    	color:#FFF;
