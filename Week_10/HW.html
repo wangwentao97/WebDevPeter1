@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS slide show</title>
+	 <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <style type="text/css">
+    	button{
+    		desplay:inline-block;
+    		margin-top: 10px;
+    		cursor: pointer;
+    	}
+    </style>
+</head>
+<body>
+	<div class = "container">
+		<h1>Cute Kitten Pics</h1>
+		<img src="img/1.jpg" id = "slideShow" height = 400px >
+		<br>
+		<button class="btn btn-default" id="first">
+    		1
+    	</button>
+
+    	<button class="btn btn-default" id="second">
+    		2
+    	</button>
+
+    	<button class="btn btn-default" id="third">
+    		3
+    	</button>
+
+
+	</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#first').click(function(){
+			$('#slideShow').attr('src','img/1.jpg'); 
+		});
+		$('#second').click(function(){
+			$('#slideShow').attr('src','img/2.jpg'); 
+		});
+		$('#third').click(function(){
+			$('#slideShow').attr('src','img/3.jpeg'); 
+		});
+
+	});
+
+</script>
+
+</body>
+</html>
