@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gallery</title>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" 
+    integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" 
+    crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- nav bar with logo on the left and menus on the right -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo4.jpg" width="60" height="60" class="d-inline-block mb-0 h1" alt="" id="title">  Wentao's Kitchen</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            
+            <li class="nav-item active">
+              <a class="nav-link" href="gallery.html">Gallery<span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Recipes
+              </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="meat.html">Meat</a>
+                    <a class="dropdown-item" href="staple.html">Noodles</a>
+                    <a class="dropdown-item" href="snack.html">nacks</a>
+                </div>
+            </li>
+          
+          <li class="nav-item">
+              <a class="nav-link" href="resource.html">Resources</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+
+
+        </ul>
+    </div>
+  </nav>
+
+  <div class="controls">
+        <label>Choose your favourite: </label>
+        <button class="filter" data-filter=".meat">Meat</button>
+        <button class="filter" data-filter=".vegi">Vegi</button>
+        <button class="filter" data-filter=".snack">Snack</button>
+        <button class="filter" data-filter=".soup">Soup</button>
+        <button class="filter" data-filter=".teri">Teriyaki</button>
+        <button class="filter" data-filter=".noodle">Noodle</button>
+        <button id="reset">Reset</button>
+  </div>
+
+  <div class="container" id="Container">
+        <!-- Fail Message Div Here -->
+        <div class="fail-message"><span>No Items were found matching the current filters</span></div>
+        <!-- sort me -->
+        <div class="mix vegi">
+          <img src="img/1.jpg">
+        </div>
+        <div class="mix noodle meat">
+          <img src="img/2.jpg">
+        </div>
+        <div class="mix meat">
+          <img src="img/3.jpg">
+        </div>
+        <div class="mix noodle meat teri">
+          <img src="img/4.jpg">
+        </div>
+        <div class="mix meat">
+          <img src="img/5.jpg">
+        </div>
+        <div class="mix meat">
+          <img src="img/6.jpg">
+        </div>
+        <div class="mix meat">
+          <img src="img/7.jpg">
+        </div>
+        <div class="mix noodle meat teri">
+          <img src="img/8.jpg">
+        </div>
+        <div class="mix vegi soup">
+          <img src="img/9.jpg">
+        </div>
+        <div class="mix snack teri">
+          <img src="img/10.jpg">
+        </div>
+        <div class="mix snack teri">
+          <img src="img/11.jpg">
+        </div>
+        <div class="mix meat vegi snack">
+          <img src="img/12.jpg">
+        </div>
+        <div class="mix noodle soup meat">
+          <img src="img/13.jpg">
+        </div>
+        <div class="mix noodle soup vegi">
+          <img src="img/14.jpg">
+        </div>
+    </div>
+
+
+
+
+
+
+
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" 
+    integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" 
+    crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" 
+    integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" 
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="jquery.mixitup.min.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function(){});
+
+    $('#reset').click(function() {
+        $('#Container').mixItUp('filter', '');
+    });
+
+    $(function() {
+
+        $('#Container').mixItUp({
+            load: {
+                filter: 'all'
+            },
+            controls: {
+                toggleFilterButtons: true, 
+                toggleLogic: 'and' 
+            },
+            animation: {
+                enable: true,
+                effects: 'fade scale stagger',
+                duration: 1000,
+                easing: 'ease',
+                perspectiveDistance: '3000',
+                perspectiveOrigin: '50% 50%',
+                queue: true,
+                queueLimit: 1,
+                animateChangeLayout: false,
+                animateResizeContainer: false,
+                animateResizeTargets: false,
+                staggerSequence: false,
+                reverseOut: false
+            }
+        });
+    });
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+   @import url('https://fonts.googleapis.com/css?family=Boogaloo');
+
+
+   body{
+      font-family: 'Boogaloo', cursive;
+      background-image: url(../img/bg1.jpg);
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-attachment: fixed;
+      background-size: 100%;
+   }
+
+   #navbarNavDropdown{
+      font-size: 25px;
+   }
+
+   #wrapper{
+      width: 70%;
+      margin-top: 2px;
+      margin-left: 15%;
+      border-radius: 10px;
+      overflow: hidden;
+   }
+
+   #wrapper img{
+        border-radius: 10px;
+   }
+
+   #wrap{
+      width: 70%;
+      margin-top: 2px;
+      margin-left: 15%;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: rgba(200, 200, 200, 0.4);
+   }
+
+   #wrap img{
+        width: 70%;
+        margin-left: 15%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+   }
+
+   #wrap h2{
+        color:#000;
+        text-align: center;
+   }
+
+   #wrap h3{
+        color:#000;
+        text-align: center;
+   }
+
+   #wrap p{
+        color:#000;
+        margin-left: 5%;
+        font-size: 20px;
+        margin-right: 5%;
+   }
+
+
+   * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    /* Mix Styles */
+
+    .container {
+        position: relative;
+        padding: 2% 2% 0;
+        height: 200px;
+    }
+
+    .container:after {
+        display: inline-block;
+        width: 100%;
+    }
+   
+
+    .container .mix{
+        display: inline-block;
+        width: 100%;
+    }
+
+    .container .mix {
+        margin-bottom: 2%;
+        border-radius: 8px;
+        display: none;
+        height: 200px;
+        overflow: hidden;
+
+    }
+
+    .container .mix img{
+        height: 200px;
+        display: block;
+    }
+
+   .container .mix:after {
+        display: inline-block;
+        vertical-align: top;
+        padding: 4% 6%;
+    }
+       
+   .container .mix:before {
+        display: inline-block;
+        padding-top: 60%;
+    }
+
+    /* larger phones and tablet size */
+        @media all and (min-width: 768px) {
+            .container .mix, .container .gap {
+                width: 48%;
+            }
+        }
+        /* Desktop and larger screens */
+        @media all and (min-width: 1024px) {
+            .container .mix,
+            .container .gap {
+                width: 24%;
+            }
+        }
+
+        /* Control Styles*/
+        .controls {
+            background-color: #333;
+            padding: 1%;
+            color: white;
+        }
+        label {
+            font-weight: 400;
+            margin: 0 20px 0 0;
+        }
+        button {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #666;
+            border: 0;
+            color: #EEE;
+            font-size: 16px;
+            font-weight: 100;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button.active {
+            background: #999;
+        }
+        button:focus {
+            outline: 0 none;
+        }
+        button + label {
+            margin-left: 1em;
+        }
+
+        /* Fail Message */
+        .container .fail-message {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2%;
+            text-align: center;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .container .fail-message:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+        .container.fail .fail-message {
+            content: '';
+            opacity: 1;
+            pointer-events: all;
+        }
+        .container .fail-message span {
+            display: inline-block;
+            font-weight: 500;
+            color: #333;
+            font-size: 20px;
+            vertical-align: middle;
+        }
+
+    /*side navbar*/
+    #sideNav ul {
+        position: fixed;
+        top: 40%;
+        right: 0%;
+        list-style-type: none;
+    }
+
+    #sideNav ul li {
+        width: 100px;
+        padding: 2px;
+        margin-bottom: 3px;
+        background-color: #222;
+        border-left: 10px solid #444;
+        cursor: pointer;
+        font-size: 20px;
+        color:#FFF;
+    }
+
+    #sideNav ul li .active {
+        color: #FFF;
+        border-left: 20px solid #FFF;
+        line-height: 30px;
+    }
+
+    .dish{
+        margin-top: 20px;
+    }
+
+    #wrap1{
+      width: 90%;
+      margin-top: 10px;
+      margin-left: 5%;
+      border-radius: 5px;
+      overflow: hidden;
+      background-color: rgba(200, 200, 200, 0.4);
+    }
+
+    #wrap1 img{
+        width: 30%;
+        margin-left: 5%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        display: inline-block;
+    }
+
+    #intro{
+        display: inline-block;
+        width: 50%;
+        margin-left: 5%;
+        font-size: 20px;
+    }
+
+
+
+
+

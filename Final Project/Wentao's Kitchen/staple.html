@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Noodle</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" 
+    integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" 
+    crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+  <!-- nav bar with logo on the left and menus on the right -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo4.jpg" width="60" height="60" class="d-inline-block mb-0 h1" alt="" id="title">  Wentao's Kitchen</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Recipes
+              </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="meat.html">Meat</a>
+                    <a class="dropdown-item active" href="staple.html">Noodles</a>
+                    <a class="dropdown-item" href="snack.html">nacks</a>
+                </div>
+            </li>
+          
+          <li class="nav-item">
+              <a class="nav-link" href="resource.html">Resources</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+
+
+        </ul>
+    </div>
+  </nav>
+
+  <div id = "sideNav">
+        <ul>
+            <li id="topBtn" class="Btn">Top</li>
+            <li id="ingBtn" class="Btn">Ingredients</li>
+            <li id="proBtn" class="Btn">Processes</li>
+            <li id="advBtn" class="Btn">Advice</li>
+        </ul>
+    </div>
+
+  <div id = "wrap">
+    <h2 id = "top">Sesame Paste Noodle Soup</h2>
+    <img src="img/14.jpg">
+    <h3 id = "ing">Ingredients</h3>
+    <p>Noodle, Vegetable, meat (sausage),sesame paste, hot water, salt, sugar, sesame oil, oil, chicken bouillon, egg. </p>
+    <img src="img/n1.jpg">
+    <img src="img/n2.jpg">
+    <img src="img/n3.jpg">
+
+    <h3 id = "pro">Processes</h3>
+    <img src="img/n4.jpg">
+    <img src="img/n5.jpg">
+    <img src="img/n6.jpg">
+    <img src="img/n7.jpg">
+    <img src="img/n8.jpg">
+    <img src="img/n9.jpg">
+    <img src="img/n10.jpg">
+    <img src="img/n11.jpg">
+    
+    <h3 id = "adv">A piece of advice</h3>
+  </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" 
+    integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" 
+    crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" 
+    integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/easing/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/ScrollToPlugin.min.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+      
+        var $topBtn = $('#topBtn'),
+            $ingBtn = $('#ingBtn'),
+            $proBtn = $('#proBtn'),
+            $advBtn = $('#advBtn');
+
+        var $navButtons = $('.Btn');
+
+        $navButtons.mouseenter(function() {
+            TweenLite.to(this, 0.2, { className: '+=active' });
+        })
+
+        $navButtons.mouseleave(function() {
+            TweenLite.to(this, 0.2, { className: '-=active' });
+        })
+
+        $topBtn.attr('data-scrollPos', $('#top').offset().top);
+        $ingBtn.attr('data-scrollPos', $('#ing').offset().top);
+        $proBtn.attr('data-scrollPos', $('#pro').offset().top);
+        $advBtn.attr('data-scrollPos', $('#adv').offset().top);
+
+        $navButtons.click(function() {
+            var myScrollPosition = $(this).attr('data-scrollPos');
+            console.log(myScrollPosition);
+            TweenLite.to(window, 1.5, { scrollTo: myScrollPosition });
+        });
+
+    });
+    </script>
+</body>
+</html>
