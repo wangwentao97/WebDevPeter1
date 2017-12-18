@@ -1,6 +1,6 @@
 Final Documentation
 
-For my final projecct, I did a website of my own cooking works. It is consisted of a home page, a gallery page, several recipe pages showing some of my recipes, a resourses page, and an about page showing some of my personal information.
+For my final projecct, I did a website of my own cooking works. It is consisted of a home page, a gallery page, several recipe pages showing some of my recipes, a resources page, and an about page showing some of my personal information.
 
 This is my home page 
 ![home page](home.png)
@@ -18,8 +18,8 @@ This is my recipe page
 ![recipe page](noodle.png)
 In the recipe page, the contents are centered in the middle, with images showing the prcesses of food making. A white semi-transparent background on the back is added to make the text more readable to the viewers. A side navbar is used to guide to dfferent part of the page by clicking different buttons.
 
-This is my resourses page
-![resourses page](resourse.png)
+This is my resources page
+![resourses page](resource.png)
 On this page, I presented some further information of some dishes that I would like to recommend to others. There is a learn more button, and clicking it opens up a model showing videos accordingly. 
 
 This is my about page
